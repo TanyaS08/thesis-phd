@@ -25,34 +25,6 @@ assets/_%.tex: 0[1-3]_%.md
 assets/_appendix_joss.tex: ??_appendix_joss.md
 	pandoc --biblatex --filter pandoc-crossref --listings -o $@ $<
 
-# FETCH FIGURES 
-FIGFILES=comparison-combined.png subareas-combined.png subareas-medians.png subareas-extents.png comparison-difference.png comparison-residuals.png rare-species.png
-FIGPATHS=$(patsubst %.png, figures/%.png, $(FIGFILES))
-BARTPATH=../betadiversity-hotspots/fig/bart
-
-figures: $(FIGPATHS)
-	
-figures/subareas-combined.png: $(BARTPATH)/05_bart_subareas.png
-	cp $< $@
-	
-figures/subareas-medians.png: $(BARTPATH)/05_bart_medians.png
-	cp $< $@
-	
-figures/subareas-extents.png: $(BARTPATH)/05_bart_extents.png
-	cp $< $@
-
-figures/rare-species.png: $(BARTPATH)/06_bart_rare-species.png
-	cp $< $@
-
-figures/comparison-combined.png: $(BARTPATH)/09_bart_combined.png
-	cp $< $@
-
-figures/comparison-difference.png: $(BARTPATH)/09_bart_difference.png
-	cp $< $@
-
-figures/comparison-residuals.png: $(BARTPATH)/09_bart_residuals.png
-	cp $< $@
-
 # MAIN LATEXMK RULE
 # -----------------------------------------------------------------------------
 # -pdf tells latexmk to generate PDF directly (instead of DVI).

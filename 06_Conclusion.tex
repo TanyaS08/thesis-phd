@@ -1,0 +1,73 @@
+\anglais
+\chapter{General Conclusion}\label{Conclusion}
+
+As species interaction networks are determined by ecological and
+evolutionary mechanisms that have played out across spatial and temporal
+scales the measures that define their structure also capture the
+processes that have played a role in structuring them. Thus the
+properties of a network are not only representative of its structure but
+also of \emph{how} different processes have played a role in determining
+it \emph{i.e.,} there is an element of predictability in being able to
+quantify the structure of a network. For example \cite{MacDonald2020RevLin}
+and \cite{Banville2023What} show that, after taking into account biological constraints, it is possible to make inferences as to the properties of networks. The ability to use a 'simple' measures of the community for a given location and to have an estimate of the structure of the potential network is truly
+amazing. To me this is echoed in Chapter~\ref{Foodweb} and really showcases that
+with very little 'real world' information we can still make really solid
+predictions due to the 'information' encoded in networks.
+
+\section{Scrutinising our methods}
+
+Something something that the job isn't done when it comes to really looking at the data we are using for prediction. More recent work is showing that the imbalances in current data might be a bigger problem than what we would like to admit (especially the false negative rate, \emph{i.e.,} interactions that do occur but are missed in the field). When reading the work from \cite{Poisot2023Guidelines} and \cite{Catchen2023Missing} one can't help but get a bit hesitant to jump on the prediction bandwagon, however I console myself that we are able to show in \autoref{rdpg-yields-an-accurate-classifier} that the transfer learning model does do quite well even when we bring false interactions into the dataset. Of course this does highlight the need to be critical (or at least cautious) when it comes to using datasets for learning, and highlights the need for identifying priority sampling locations and (maybe) even priority interactions, \emph{e.g.,} \href{https://github.com/EcoJulia/BiodiversityObservationNetworks.jl/tree/main}{some} of the work coming out of the GeoBon group
+focusing on locating priority sampling locations 
+
+Something about how we can try and push the limits of the reconstruction
+chapter further. Some ideas include maybe looking at rewilding projects
+and seeing if we are able to recover those interactions (or maybe even 
+invasion studies). There is also the possibility for looking at 'distant
+relatives' communities e.g., trying to recover Australian interactions.
+But the idea of thinking about construction in the context of rewilding
+is extremely tempting...
+
+\section{Defining ecotrophic zones}
+
+Networks are dynamic, and they can vary across space
+\cite{Golubski2016EcoNet, Vazquez2007SpeAbu} or time
+\cite{Poisot2015SpeWhy, Trojelsgaard2016EcoNet} as a function of the
+environmental conditions. Naturally, we expect network properties to
+also be dynamic and vary over - in this instance - space. Spatial
+wombling can be used as a starting for understanding \emph{how} networks
+vary in across a landscape. An initial direction to push this idea is . 
+
+This comparison to species turnover
+lends itself to an interesting comparison - do we see similar patterns
+of rates of change at the species or community level and with regards to
+network structure? For example although we might expect species
+composition to change along a gradient it may be that they are replaced
+by a functional equivalent and we may not expect to see rapid change or
+turnover with regards to network structure \emph{sensu lato} conserved
+backbones \cite{Mora2018IdeCom}. Alternatively, intraspecific variation
+could drive interaction turnovers even without changes in species
+composition \cite{Bolnick2011WhyInt} \emph{i.e.,} a re-wiring of
+interactions. Indeed, \cite{Martins2022Global} showcases this with avian
+frugivory networks where species-level differences are linked to environmental
+changes but not network structure.
+
+\subsection{How does the within structure of networks vary?}
+
+There is also the scope to develop a more nuanced understanding of how
+the landscape structures networks. Specifically how the different nodes
+(\emph{i.e.} species) of the network will perceive the landscape
+differently. Which means that we might expect \emph{within} network
+changes \emph{i.e.} change in motifs/graphlets across the landscape, although deciding exactly what measure might actually be driving differences between local networks and the regional metaweb might not be that simple \cite{Saravia2022Ecological}. That being said \cite{Fortin2021NetEcoa} provide a compelling argument for the need to `combine' these smaller functional units with larger spatial networks (and arguably even thinking about the interplay of time and space \cite{Estay2023Editorial}). \autoref{supp:boundaries} shows some initial (and by no means well resolved) ideas of how we can use the \texttt{SpatialBoundaries.jl} along with the metacommunity model developed by \cite{Thompson2017Dispersal} to look at the how the environmental, species community, and network communities compare within a landscape.
+
+\subsection{Boundaries for policy or management}
+
+Although this section argues for a more theoretical approach to understanding boundaries in the context of understanding potential assembly patterns/constraints there is also a strong argument for being able to draw lines around communities (or (realistically) provide an argument to challenge it). In \autoref{the-metaweb-merges-ecological-hypotheses-and-practices} and \autoref{conclusion-metawebs-predictions-and-people} we briefly mention that the scale of prediction should be relevant, but should also take into consideration people. To me there is an argument that this is also the case when thinking about network boundaries. Unfortunately policy and legislation are enacted at various levels of government/ruling bodies. Being able to \emph{show} the boundaries between networks may in fact be a powerful tool at the governance level as it is surely more meaningful than looking at the species community. Although I feel it is important to stress that the idea of trying to draw boundaries should be approached with caution and sensitivity, and to me echos many of the sentiments discussed in Box 2 of \autoref{box:people}.
+
+\section{The future collaborative toolbox}
+
+On a probably more contemplative closing note I want to discuss the value of thinking about the development of further tools for the toolbox analogy used in this thesis. A non-insignificant amount of work in this thesis was only possible with the support and intellectual contribution of many collaborators and there is an argument for continuing this strong network of collaboration for future tools. From a purely practical perspective the continued push for developing biology-centric packages within the \texttt{Julia} language \cite{Roesch2021Julia} requires that we maintain interoperability between packages and build a collection that build on and fit in amongst each other. Looking at the science/theoretical side of the toolbox, a unified idea or goal for moving the macroecological network 'agenda' means that we can build on ideas and thoughts to a more collective research agenda. For example \cite{Dansereau2023Spatially, Catchen2023Improving, Banville2023What} have all already used the work presented in this thesis to take the ideas discussed in new and further directions. And although this is not to say that we should not also work on developing 'competing' methods (although I would argue 'competing' here it is used in the context for finding alternative approaches to solving a similar problem \emph{e.g.,} \cite{Caron2022Addressing} takes a more trait-based approach to network prediction) there is strong evidence that in working together we can get where we want to be sooner. 
+
+\bibliographystyle{plain}
+\sectionbibliography{ref_Intro.bib}
+
+\endinput
